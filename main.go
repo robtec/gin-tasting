@@ -26,5 +26,5 @@ func listAllGins(c *gin.Context) {
 
 	gins := gins.All()
 
-	c.JSON(http.StatusOK, gins)
+	c.IndentedJSON(http.StatusOK, gins)
 }
