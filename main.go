@@ -12,8 +12,14 @@ func main() {
 	router := gin.Default()
 
 	router.GET("/gins", listAllGins)
+	router.GET("/gin/:name", byGinName)
 
 	router.Run(":8080")
+}
+
+func byGinName(c *gin.Context) {
+	n := c.Param("name")
+	c.String(http.StatusOK, n)
 }
 
 func listAllGins(c *gin.Context) {
