@@ -1,24 +1,26 @@
 package gins
 
+// Gin attributes of a Gin
 type Gin struct {
 	Name     string
 	Origin   string
 	Launched string
 }
 
-var cabnet []Gin
+var cabinet []Gin
 
 func init() {
 
-	cabnet = addGin(Gin{"GunPowder", "Drumshanbo, Ireland", "2016"})
-	cabnet = addGin(Gin{"Bombay Sapphire", "Laverstoke Mill, Hampshire", "1987"})
-	cabnet = addGin(Gin{"Hendricks", "Ireland", "1999"})
+	cabinet = addGin(Gin{"GunPowder", "Drumshanbo, Ireland", "2016"})
+	cabinet = addGin(Gin{"Bombay Sapphire", "Laverstoke Mill, Hampshire", "1987"})
+	cabinet = addGin(Gin{"Hendricks", "Ireland", "1999"})
 }
 
+// All returns an array of Gins
 func All() []Gin {
-	return cabnet
+	return cabinet
 }
 
 func addGin(g Gin) []Gin {
-	return append(cabnet, g)
+	return append(cabinet, g)
 }
